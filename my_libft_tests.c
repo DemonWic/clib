@@ -1,34 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <ctype.h>
-#include <fcntl.h>
-#include "ft_memset.c"
-#include "ft_bzero.c"
-#include "ft_memcpy.c"
-#include "ft_memccpy.c"
-#include "ft_memmove.c"
-#include "ft_memchr.c"
-#include "ft_memcmp.c"
-#include "ft_strlen.c"
-#include "ft_strdup.c"
-#include "ft_strcpy.c"
-#include "ft_strncpy.c"
-#include "ft_strcat.c"
-#include "ft_strncat.c"
-#include "ft_strlcat.c"
-#include "ft_strchr.c"
-#include "ft_strrchr.c"
-#include "ft_strstr.c"
-#include "ft_strnstr.c"
-#include "ft_strcmp.c"
-#include "ft_strncmp.c"
-#include "ft_atoi.c"
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
-#include "ft_isalnum.c"
-#include "ft_isascii.c"
+#include "libft.h"
 
 
 
@@ -1269,7 +1239,7 @@ int		main(void)
 	* 1. FT_MEMALLOC
 	*/
 
-/*	char	*str79;
+	char	*str79;
 	char	*str80;
 
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_MEMALLOC\x1b[0m");
@@ -1294,9 +1264,9 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 2. FT_MEMDEL
-	*
+	*/
 
 	void	*vd;
 
@@ -1316,9 +1286,9 @@ int		main(void)
 		}
 	}
 
-	**
+	/**
 	* 3. FT_STRNEW
-	*
+	*/
 
 	char	*str81;
 	char	*str82;
@@ -1345,9 +1315,9 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 4. FT_STRDEL
-	*
+	*/
 
 	char	*str83;
 
@@ -1367,9 +1337,9 @@ int		main(void)
 		}
 	}
 
-	**
+	/**
 	* 5. FT_STRCLR
-	*
+	*/
 
 	char	str84[6] = "hello";
 
@@ -1386,9 +1356,9 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 6. FT_STRITER
-	*
+	*/
 
 	char	str85[6] = "hello";
 
@@ -1405,10 +1375,11 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 7. FT_STRITERI
-	*/
-/*
+	*/ 
+	
+
 	char	str86[6] = "hello";
 
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_STRITERI\x1b[0m");
@@ -1424,10 +1395,11 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 8. FT_STRMAP
-	*/
-/*  
+	*/ 
+
+  
 	char	str87[6] = "hello";
 	char	*str88;
 
@@ -1444,10 +1416,11 @@ int		main(void)
 		printf("Result: %s\n", "\x1b[31mFAIL\x1b[0m");
 	}
 
-	**
+	/**
 	* 9. FT_STRMAPI
 	*/
-/*  
+	
+ 
 	char	str89[6] = "hello";
 	char	*str90;
 
@@ -1467,7 +1440,7 @@ int		main(void)
 	/**
 	* 9. FT_STREQU
 	*/
-/*  
+  
 	char	str91[6] = "hello";
 	char	str92[6] = "hel45";
 	int		intg7;
@@ -1500,7 +1473,7 @@ int		main(void)
 	/**
 	* 10. FT_STRNEQU
 	*/
-/*  
+  
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_STRNEQU\x1b[0m");
 	printf("Initial: %s\n", str91);
 	intg7 = ft_strnequ(str91, str91, 5);
@@ -1541,7 +1514,7 @@ int		main(void)
 	/**
 	* 11. FT_STRSUB
 	*/
-/*  /* 
+ 
 	char	str93[6] = "hello";
 	char	*str94;
 
@@ -1561,7 +1534,7 @@ int		main(void)
 	/**
 	* 12. FT_STRJOIN
 	*/
-/*
+
 	char	str95[3] = "he";
 	char	str96[4] = "llo";
 	char	*str97;
@@ -1583,7 +1556,7 @@ int		main(void)
 	/**
 	* 13. FT_STRTRIM
 	*/
-/*
+
 	char	str105[] = "     hello    ";
 	char	*str106;
 	char	str107[] = "\t\n hello    ";
@@ -1616,7 +1589,7 @@ int		main(void)
 	/**
 	* 14. FT_STRSPLIT
 	*/
-/*
+
 	char	str119[] = "hello***hello***hello";
 	char	**arr;
 	char	str120[] = "iiiiiihelloiihelloihelloiiii";
@@ -1649,7 +1622,7 @@ int		main(void)
 	/**
 	* 15. FT_ITOA
 	*/
-/*
+
 	char	*str109;
 	char	*str110;
 	char	*str111;
@@ -1727,7 +1700,7 @@ int		main(void)
 	/**
 	* 16. FT_PUTCHAR
 	*/
-/*
+
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_PUTCHAR\x1b[0m");
 	printf("Initial: %c\n", 'a');
 	ft_putstr("ft_putchar return: ");
@@ -1737,7 +1710,7 @@ int		main(void)
 	/**
 	* 17. FT_PUTSTR
 	*/
-/*
+
 	char	str98[6] = "hello";
 
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_PUTSTR\x1b[0m");
@@ -1749,7 +1722,7 @@ int		main(void)
 	/**
 	* 18. FT_PUTENDL
 	*/
-/*
+
 	char	str99[6] = "hello";
 
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_PUTENDL\x1b[0m");
@@ -1760,7 +1733,7 @@ int		main(void)
 	/**
 	* 19. FT_PUTNBR
 	*/
-/*
+
 	int		intg13 = 42;
 
 	printf("*———————————————————————————————————————————————————————*\n%s\n", "\x1b[94mFT_PUTNBR\x1b[0m");
@@ -1772,7 +1745,7 @@ int		main(void)
 	/**
 	* 20. FT_PUTCHAR_FD
 	*/
-/*
+
 	int		fd;
 	char	ch3;
 
@@ -1797,7 +1770,7 @@ int		main(void)
 	/**
 	* 21. FT_PUTSTR_FD
 	*/
-/*
+
 	char	str100[6] = "hello";
 	char	str101[6];
 	int		fd2;
@@ -1827,7 +1800,7 @@ int		main(void)
 	/**
 	* 22. FT_PUTENDL_FD
 	*/
-/*  
+  
 	char	str102[6] = "hello";
 	char	str103[6];
 	int		fd3;
@@ -1857,7 +1830,7 @@ int		main(void)
 	/**
 	* 23. FT_PUTNBR_FD
 	*/
-/*  
+  
 	int		intg14 = 42;
 	char	str122[5];
 	int		fd4;
