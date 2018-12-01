@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 15:09:58 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/22 17:43:42 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/11/30 13:33:34 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	sim;
-	char			*s;
-	char			*d;
+	unsigned char	*s;
+	unsigned char	*d;
 	size_t			i;
 
 	sim = (char)c;
-	s = (char *)src;
-	d = (char *)dst;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
 	i = 0;
 	while (i < n)
 	{

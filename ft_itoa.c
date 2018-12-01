@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 11:08:45 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/29 15:52:02 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 10:25:40 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,14 @@ char		*ft_itoa(int n)
 	}
 	size += ft_size(n);
 	res = (char *)malloc(size + 1);
+	if (res == NULL)
+		return (NULL);
 	res[size--] = '\0';
 	while (n > 0)
 	{
 		res[size--] = (n % 10) + 48;
 		n /= 10;
 	}
-	printf("%i\n", size);
 	if (size == 0)
 		res[size] = '-';
 	return (res);

@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 12:48:48 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/29 16:04:52 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 16:10:56 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int		ft_strequ(char const *s1, char const *s2)
 	char	*r2;
 
 	i = 0;
+	if (!(s1) || !(s2))
+		return (1);
 	r1 = (char *)s1;
 	r2 = (char *)s2;
 	while (r1[i] || r2[i])

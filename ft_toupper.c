@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 16:54:18 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/27 16:32:48 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 16:30:27 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 int		ft_toupper(int c)
 {
-	unsigned char	sim;
-
-	sim = (unsigned char)c;
-	if (sim >= 97 && sim <= 122)
-		return (sim - 32);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	else
-		return (sim);
+		return (c);
 }

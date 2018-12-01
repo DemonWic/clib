@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:47:04 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/29 16:06:11 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 16:38:42 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strnew(size_t size)
 	char	*con;
 
 	i = 0;
-	res = (char *)malloc(size);
+	res = (char *)malloc(size + 1);
 	if (res == NULL)
 		return (NULL);
 	con = res;
-	while (i < size)
+	while (i <= size + 1)
 		res[i++] = '\0';
 	return (con);
 }

@@ -6,19 +6,17 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 16:22:21 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/25 16:23:34 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 16:29:13 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isprint(int c)
 {
-	unsigned char	sim;
-	unsigned char	num;
+	int num;
 
-	sim = (unsigned char)c;
-	num = 32;
+	num = (int)32;
 	while (num <= 126)
-		if (sim == num++)
+		if (c == num++)
 			return (1);
 	return (0);
 }

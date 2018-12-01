@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/25 12:19:43 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/01 14:25:20 by ahintz           ###   ########.fr       */
+/*   Created: 2018/11/30 11:10:12 by ahintz            #+#    #+#             */
+/*   Updated: 2018/11/30 12:18:39 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		main()
 {
-	int				i;
-	unsigned char	*r1;
-	unsigned char	*r2;
+	char	*s1 = "\xff\xaa\xde\xffMACOSX\xff";
+	char	*s2 = "\xff\xaa\xde\x02";
+	size_t	s = 8;
 
-	i = 0;
-	r1 = (unsigned char *)s1;
-	r2 = (unsigned char *)s2;
-	while (r1[i] || r2[i])
-	{
-		if (r1[i] != r2[i])
-			return (r1[i] - r2[i]);
-		i++;
-	}
+	int i1 = memcmp(s1, s2, s);
+	int i2 = ft_memcmp(s1, s2, s);
+	printf("%i\n", i1);
+	printf("%i\n", i2);
 	return (0);
 }

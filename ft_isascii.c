@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 15:41:49 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/25 16:10:29 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/01 16:28:14 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 int		ft_isascii(int c)
 {
-	unsigned char	sim;
-	unsigned char	num;
+	int num;
 
-	sim = (unsigned char)c;
 	num = 0;
 	while (num <= 127)
-		if (sim == num++)
+		if (c == num++)
 			return (1);
 	return (0);
 }
