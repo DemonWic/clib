@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_rot_n.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 11:10:12 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/30 12:18:39 by ahintz           ###   ########.fr       */
+/*   Created: 2018/12/03 12:15:04 by ahintz            #+#    #+#             */
+/*   Updated: 2018/12/03 12:21:43 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main()
+char	*ft_rot_n(char *s, int n)
 {
-	char	*s1 = "\xff\xaa\xde\xffMACOSX\xff";
-	char	*s2 = "\xff\xaa\xde\x02";
-	size_t	s = 8;
+	int i;
 
-	int i1 = memcmp(s1, s2, s);
-	int i2 = ft_memcmp(s1, s2, s);
-	printf("%i\n", i1);
-	printf("%i\n", i2);
-	return (0);
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = ((s[i] - 97) + n) % 26 + 97;
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] = ((s[i] - 65) + n) % 26 + 65;
+		i++;
+	}
+	return (s);
 }

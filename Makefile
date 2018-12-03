@@ -6,7 +6,7 @@
 #    By: ahintz <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 08:36:14 by ahintz            #+#    #+#              #
-#    Updated: 2018/12/01 08:36:17 by ahintz           ###   ########.fr        #
+#    Updated: 2018/12/03 14:27:14 by ahintz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ SRC = ft_*.c
 OBJ = ft_*.o
 FLAGS = -Wall -Wextra -Werror 
 
-all: 
+all: $(NAME) 
+$(NAME):
 	gcc $(FLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)

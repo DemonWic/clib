@@ -6,13 +6,13 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 09:43:21 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/01 15:06:19 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/03 12:31:22 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void ft_memory(char **res, char const *s, char c)
+static void	ft_memory(char **res, char const *s, char c)
 {
 	int		j;
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 11:08:45 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/01 10:25:40 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/03 13:52:55 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static	int	ft_size(int n)
 	int		i;
 
 	i = 0;
+	if (n == 0)
+		return (1);
 	while (n > 0)
 	{
 		n /= 10;
@@ -25,14 +27,34 @@ static	int	ft_size(int n)
 	return (i);
 }
 
+static char	*ft_exstremum(int n)
+{
+	char *res;
+
+	if (n == 0)
+	{
+		res = (char *)malloc(2);
+		if (res == NULL)
+			return (NULL);
+		return (ft_strcpy(res, "0"));
+	}
+	else
+	{
+		res = (char *)malloc(12);
+		if (res == NULL)
+			return (NULL);
+		return (ft_strcpy(res, "-2147483648"));
+	}
+}
+
 char		*ft_itoa(int n)
 {
 	char	*res;
 	int		size;
 
 	size = 0;
-	if (n == -2147483648)
-		return ("-2147483648");
+	if (n == 0 || n == -2147483648)
+		return (ft_exstremum(n));
 	if (n < 0)
 	{
 		size++;
