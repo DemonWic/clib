@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 14:03:46 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/03 14:36:38 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/03 17:09:59 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+
+void				ft_lstdelone(t_list **alst, void (*del) (void *, size_t));
 
 char				*ft_rot_n(char *s, int n);
 #endif
