@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 14:03:46 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/03 17:09:59 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/04 16:59:06 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 
 void				ft_lstdelone(t_list **alst, void (*del) (void *, size_t));
+t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstdel(t_list **alst, void (*del) (void *, size_t));
+void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
 
 char				*ft_rot_n(char *s, int n);
 #endif

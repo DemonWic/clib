@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 10:00:36 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/02 12:19:10 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/04 17:54:57 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,16 @@ char	*ft_strtrim(char const *s)
 		res[i++] = s[start++];
 	res[i] = '\0';
 	return (res);
+}
+
+int		main()
+{
+//	char s[] = "\t\n  \tAAA \t BBB\t\n  \t";
+//	char *s1;
+//	s1 = ft_strtrim(s);
+	int p = strcmp(ft_strtrim("\t\n \tAAA \t BBB\t\n \t"), "AAA \t BBB");
+	printf("%i\n", p);
+//	printf("%s\n", ft_strtrim(".    ASDFGGHJ Af fdgsg   fdghdfgh       "));
+//	printf("%s\n", s1);
+	return (0);
 }

@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 16:56:40 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/04 14:01:57 by ahintz           ###   ########.fr       */
+/*   Created: 2018/12/04 15:44:25 by ahintz            #+#    #+#             */
+/*   Updated: 2018/12/04 16:51:32 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del) (void *, size_t))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 {
-	t_list **buf;
+	t_list *new;
+	t_list *con;
 
-	buf = alst;
-	while ((*buf)->next)
-		ft_lstdel(&(*buf)->next, del);
-	ft_lstdelone(&(*buf), del);
+	if (!lst)
+		return (NULL);
+	if (!(new = f(lst)))
+		return (NULL);
+	con = new;
+	while (lst->next)
+	{
+		lst = lst->next;
+		if (!(new->next = f(lst)))
+		{
+			free(new->next);
+			return (NULL);
+		}
+		new = new->next;
+	}
+	return (con);
 }
