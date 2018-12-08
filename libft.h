@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 14:03:46 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/08 12:57:07 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/08 17:57:29 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <ctype.h>
@@ -90,4 +89,8 @@ void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
 
 char				*ft_rot_n(char *s, int n);
+int					ft_sqrt(int nb);
+char				*ft_base16_encoder(char *s);
+char				*ft_base16_decoder(char *s);
+long long int		ft_pow(int nb, int p);
 #endif
