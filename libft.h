@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 14:03:46 by ahintz            #+#    #+#             */
-/*   Updated: 2018/12/04 16:59:06 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/08 12:57:07 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 void				*ft_memalloc(size_t size);
+void				ft_putchar(char c);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
@@ -70,6 +71,16 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putendl(char const *s);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr(int n);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putstr(char const *s);
+void				ft_putstr_fd(char const *s, int fd);
+char				*ft_itoa(int n);
+char				*ft_strtrim(char const *s);
+char				**ft_strsplit(char const *s, char c);
 
 void				ft_lstdelone(t_list **alst, void (*del) (void *, size_t));
 t_list				*ft_lstnew(void const *content, size_t content_size);

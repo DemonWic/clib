@@ -6,7 +6,7 @@
 /*   By: ahintz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 15:09:58 by ahintz            #+#    #+#             */
-/*   Updated: 2018/11/30 13:33:34 by ahintz           ###   ########.fr       */
+/*   Updated: 2018/12/08 13:12:40 by ahintz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(d++) = *(s++);
-		i++;
 		if (*(s) == sim)
 		{
 			*(d++) = *(s++);
 			return (d);
 		}
+		*(d++) = *(s++);
+		i++;
 	}
 	return (NULL);
 }
